@@ -13,6 +13,9 @@ The Dataset contains 10 years worth of meteorological data (years 2007-2017), or
 
 Given a specific set of weather parameters like location, temperature, wind direction, evaporation and humidity, the web service is meant to predict if there will be rain tomorrow in Australia. The underlying problem is a binary classification problem where the outcome can either be "True" - it will rain -  or "False" - there will be no rain.
 
+"Classification is a type of supervised learning in which models learn using training data, and apply those learnings to new data. [...] The main goal of classification models is to predict which categories new data will fall into based on learnings from its training data."
+[Reference:](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml)
+
 ### Access
 The dataset is hosted on my personal github account and accessed via URL with azureMLs [*Dataset* class](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.dataset.dataset?view=azure-ml-py). 
 The data is then converted to a pandas dataframe.
