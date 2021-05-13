@@ -30,8 +30,8 @@ def clean_data(data):
 
     ## 
     
-    x_df["RainToday"] = x_df.RainToday.apply(lambda s: 1 if s == "Yes" else 0)
-    x_df["RainTomorrow"] = x_df.RainTomorrow.apply(lambda s: 1 if s == "Yes" else 0)
+    x_df["RainToday"] = x_df.RainToday.apply(lambda s: 1 if s == True else 0)
+    x_df["RainTomorrow"] = x_df.RainTomorrow.apply(lambda s: 1 if s == True else 0)
 
     x_df = pd.get_dummies(x_df, columns=["Location","WindGustDir","WindDir9am","WindDir3pm"], drop_first=True)
     y_df = x_df.pop("RainTomorrow")
@@ -49,7 +49,7 @@ def main():
 
     parser.add_argument('--criterion', type=str, default="gini", help="The function to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain.")
     parser.add_argument('--splitter', type=str, default="best", help="The strategy used to choose the split at each node. Supported strategies are “best” to choose the best split and “random” to choose the best random split.")
-    parser.add_argument('--max_depth', type=int, help="The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.")
+    parser.add_argument('--max_depth', type=int, default=6, help="The maximum depth of the tree. If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples.")
 
     args = parser.parse_args()
 
