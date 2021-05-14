@@ -42,9 +42,8 @@ My choices for the config were as follows:
 
 My AutoML experiment returned a StackEnsemble as best performing model, with a weighted AUC score of 0.88999. 
 A "StackEnsemble", "Stacked Generalization" or "Stacking", is 
-  "an ensemble machine learning Algorithm, that learns how to best combine the predictions from multiple well-performing machine learning models." 
   
-Source: [machinelearningmastery.com](https://machinelearningmastery.com/stacking-ensemble-machine-learning-with-python/)
+  "an ensemble machine learning Algorithm, that learns how to best combine the predictions from multiple well-performing machine learning models." [Source](https://machinelearningmastery.com/stacking-ensemble-machine-learning-with-python/)
 
 
 
