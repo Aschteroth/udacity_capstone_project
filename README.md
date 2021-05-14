@@ -68,17 +68,25 @@ The score of 0.88999 is already pretty good, but there are some options to impro
 
 
 ## Hyperparameter Tuning
-*TODO*: What kind of model did you choose for this experiment and why? Give an overview of the types of parameters and their ranges used for the hyperparameter search
+
+For the hyperparameter experiment, I chose a 
+
+
+![image](https://user-images.githubusercontent.com/61315167/118231393-5be52900-b48f-11eb-9bf0-6a73ec6432d6.png)
 
 *Fig. 5: Run Detail Widget showing completion of hyperparameter experiment*
 
+![image](https://user-images.githubusercontent.com/61315167/118231494-86cf7d00-b48f-11eb-9b22-a854b19f397e.png)
 
-*Fig. 6: The best models obtained in the experiment in descending order*
+
+*Fig. 6: Performance of the experiments child runs*
+
+![image](https://user-images.githubusercontent.com/61315167/118231427-6b647200-b48f-11eb-9144-fd09dd538037.png)
+
+*Fig. 7: The highest scoring run of the experiment *
 
 
-*Fig. 7: The best model, a *
-
-The score of 0.88999 is already pretty good, but there are some options to improve that score: 
+to improve that score: 
 
 
 ### Results
