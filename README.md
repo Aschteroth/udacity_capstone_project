@@ -36,7 +36,7 @@ My choices for the config were as follows:
 
 ![image](https://user-images.githubusercontent.com/61315167/118227684-3fde8900-b489-11eb-833e-dd684afbc213.png)
 
-*Fig. 1: AutoMl*
+*Fig. 1: AutoMl settings*
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
