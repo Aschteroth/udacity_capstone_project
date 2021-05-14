@@ -35,7 +35,8 @@ My choices for the config were as follows:
 - Since this is just a project to show my newly aquired skills, I enabled early stopping for efficiency reasons. Otherwise, the model might run for several hours or even days without improving much.
 
 ![image](https://user-images.githubusercontent.com/61315167/118227684-3fde8900-b489-11eb-833e-dd684afbc213.png)
-*Fig. 1: AutoMl
+
+*Fig. 1: AutoMl*
 
 ### Results
 *TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
