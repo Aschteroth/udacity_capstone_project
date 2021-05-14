@@ -94,9 +94,9 @@ For the hyperparameter experiment, I chose a
 *Fig. 8: The highest scoring run of the experiment *
 
 #### Improvements
-to improve that score: 
+There are many different options to improve the hyperdrive results:
 
-- There are numerous other classification Algorithms to choose from, e.g. Linear Support Vector Machines, XGBoost, Light Gradient Boosting Machines or Random Forests. 
+- Try another algorithm. There are numerous other classification algorithms to choose from, e.g. Linear Support Vector Machines, XGBoost, Light Gradient Boosting Machines or Random Forests.
 - 
 
 ## Model Deployment
