@@ -71,28 +71,33 @@ The score of 0.88999 is already pretty good, but there are some options to impro
 
 For the hyperparameter experiment, I chose a 
 
+![image](https://user-images.githubusercontent.com/61315167/118266783-5e5d7800-b4bb-11eb-9cd3-2d40cc892ce7.png)
 
-![image](https://user-images.githubusercontent.com/61315167/118231393-5be52900-b48f-11eb-9bf0-6a73ec6432d6.png)
-
-*Fig. 5: Run Detail Widget showing completion of hyperparameter experiment*
-
-![image](https://user-images.githubusercontent.com/61315167/118231494-86cf7d00-b48f-11eb-9b22-a854b19f397e.png)
+*Fig. 5: hyperdrive config*
 
 
-*Fig. 6: Performance of the experiments child runs*
-
-![image](https://user-images.githubusercontent.com/61315167/118231427-6b647200-b48f-11eb-9144-fd09dd538037.png)
-
-*Fig. 7: The highest scoring run of the experiment *
-
-
+# Improvements
 to improve that score: 
 
+- There are numerous other classification Algorithms to choose from, e.g. Linear Support Vector Machines, XGBoost, Light Gradient Boosting Machines or Random Forests. 
+- 
 
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
-*TODO* Remeber to provide screenshots of the `RunDetails` widget as well as a screenshot of the best model trained with it's parameters.
+
+![image](https://user-images.githubusercontent.com/61315167/118231393-5be52900-b48f-11eb-9bf0-6a73ec6432d6.png)
+
+*Fig. 6: Run Detail Widget showing completion of hyperparameter experiment*
+
+![image](https://user-images.githubusercontent.com/61315167/118231494-86cf7d00-b48f-11eb-9b22-a854b19f397e.png)
+
+
+*Fig. 7: Performance of the experiments child runs*
+
+![image](https://user-images.githubusercontent.com/61315167/118231427-6b647200-b48f-11eb-9144-fd09dd538037.png)
+
+*Fig. 8: The highest scoring run of the experiment *
 
 
 
