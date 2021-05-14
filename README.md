@@ -1,7 +1,7 @@
 # Machine learning Engineer with Microsoft Azure - Capstone Project
 ## a Udacity Nanodegree
 
-In this final project I will set up a workspace and compute cluster in Microsoft AzureMl studio and work with a free dataset from an external source, creating an  Automated Machine Learning (AutoMl) and a Hyperdrive experiment with the Python SDK. The best performing model will be deployed and can be consumed via web service.
+In this final project I will set up a workspace and compute cluster in Microsoft AzureMl studio and work with a free dataset from an external source, creating an  Automated Machine Learning (AutoMl) and a Hyperdrive experiment with the Python SDK. The best performing model will then be deployed and can be consumed via web service.
 
 ## Dataset
 
@@ -41,10 +41,4 @@ The data is then converted to a pandas dataframe.
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
-- A working model
-- Demo of the deployed  model
-- Demo of a sample request sent to the endpoint and its response
-
-## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+You can take a look at my project [here](https://www.youtube.com/watch?v=34cjqPEEy1M)
