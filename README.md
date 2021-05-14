@@ -39,7 +39,6 @@ My choices for the config were as follows:
 *Fig. 1: AutoMl settings*
 
 ### Results
-*TODO*: What are the results you got with your automated ML model? What were the parameters of the model? How could you have improved it?
 
 My AutoML experiment returned a StackEnsemble as best performing model, with a weighted AUC score of 0.88999. 
 A "StackEnsemble", "Stacked Generalization" or "Stacking", is 
