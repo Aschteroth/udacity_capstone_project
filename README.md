@@ -76,12 +76,6 @@ For the hyperparameter experiment, I chose a
 *Fig. 5: hyperdrive config*
 
 
-# Improvements
-to improve that score: 
-
-- There are numerous other classification Algorithms to choose from, e.g. Linear Support Vector Machines, XGBoost, Light Gradient Boosting Machines or Random Forests. 
-- 
-
 ### Results
 *TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
 
@@ -99,7 +93,11 @@ to improve that score:
 
 *Fig. 8: The highest scoring run of the experiment *
 
+#### Improvements
+to improve that score: 
 
+- There are numerous other classification Algorithms to choose from, e.g. Linear Support Vector Machines, XGBoost, Light Gradient Boosting Machines or Random Forests. 
+- 
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
