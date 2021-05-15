@@ -65,11 +65,16 @@ The score of 0.88999 is already pretty good, but there are some options to impro
 - Choosing another primary metric than AUC weighted
 - Collecting more data for the dataset. Since the last entry is from 2017, we could get a little bit more than 3 years worth of additional data. 
 - Try different startegies to handle missing data like imputation, dropping them altogether or using random values in the range of data for each column
+- One-hot encoding categorical data
 
 
 ## Hyperparameter Tuning
 
-For the hyperparameter experiment, I chose a 
+For the hyperparameter experiment, I chose a [DecisionTreeClassifier](https://scikit-learn.org/stable/modules/tree.html) model from the sklearn-library. A decision tree is a non-parametric supervised learning method used for classification and regression that will predict a label column by learning from the data features.
+
+I decided to use config parameters similar to the parameters used in the first project of this course: 
+- Early termination improves computational efficiency, but might return a slightly worse result by missing some good candidates. I chose the "Bandit" policy, an aggressive policy based on slack factor/slack amount and evaluation interval, that early terminates any runs where the primary metric is not within the specified slack factor/slack amount with respect to the best performing training run. I specified a slack factor of 0.1 and an evaluation interval of 3.[Source and further reading](https://azure.github.io/azureml-sdk-for-r/reference/bandit_policy.html)
+- Random search is a technique where random combinations of the hyperparameters are used to find the best solution for the built model. Compared to a Grid search, where we try every combination of a preset list of values of the hyper-parameters and evaluate the model for each combination, Random search yields equal or even better results with comparably less resources. Since the provided lab is limited to 4 hours, I chose the faster RandomParameterSampling. [Source and further reading](https://medium.com/@senapati.dipak97/grid-search-vs-random-search-d34c92946318#:~:text=Random%20search%20works%20best%20for,are%20less%20number%20of%20dimensions)
 
 ![image](https://user-images.githubusercontent.com/61315167/118266783-5e5d7800-b4bb-11eb-9cd3-2d40cc892ce7.png)
 
@@ -77,7 +82,8 @@ For the hyperparameter experiment, I chose a
 
 
 ### Results
-*TODO*: What are the results you got with your model? What were the parameters of the model? How could you have improved it?
+
+The best run from the hyperdrive experiments scored a weighted AUC of 0.86481, the randomly chosen parameters were criterion:gini, splitter: best and a max depth of 6. The run took 5 minutes and 48 seconds to complete. Since the result was slightly below the result from the AutoMl model, I chose to discard the HyperDrive models.
 
 
 ![image](https://user-images.githubusercontent.com/61315167/118231393-5be52900-b48f-11eb-9bf0-6a73ec6432d6.png)
@@ -94,15 +100,19 @@ For the hyperparameter experiment, I chose a
 *Fig. 8: The highest scoring run of the experiment *
 
 #### Improvements
-There are many different options to improve the hyperdrive results:
+There are some options one could explore to improve the results from the HyperDrive experiment:
 
 - Try another algorithm. There are numerous other classification algorithms to choose from, e.g. Linear Support Vector Machines, XGBoost, Light Gradient Boosting Machines or Random Forests.
-- 
+- Choose another sampling method. A grid search is more exhaustive but might yield better results. Bayesian sampling will probably yield the best results, but is even more computationally exhaustive than a grid search.
+- Tune or change the early termination policy. I could experiment with stricter slack factors and different evaluation intervals or use another policy or drop it altogether. 
+- Increase the number of maximum total runs
+
+[Further reading](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-tune-hyperparameters)
 
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
-The model takes a dictionary with following keys: 
+The model takes a dictionary with following keys as input: 
 {"data": [{"Date": str,
                 "Location": str,
                 "MinTemp": float,
