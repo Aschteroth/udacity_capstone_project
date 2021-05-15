@@ -133,7 +133,7 @@ See [Microsoft docs](https://docs.microsoft.com/en-us/python/api/azureml-core/az
 *Fig. 11: Deployment*
 
 ![image](https://user-images.githubusercontent.com/61315167/118365714-49a5e080-b59e-11eb-90a0-c1c24786bd1e.png)
-*Fig. 12: The deployed web service, showing "healthy" status*
+/n *Fig. 12: The deployed web service, showing "healthy" status*
 
 ## Querying the service
 
