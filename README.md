@@ -140,6 +140,7 @@ See [Microsoft docs](https://docs.microsoft.com/en-us/python/api/azureml-core/az
 ## Querying the service
 
 The deployed service takes an HTTP POST request submitting data in JSON format, similar to a python dictionary with following keys as input: 
+
 {"data": [{"Date": str,
                 "Location": str,
                 "MinTemp": float,
@@ -163,7 +164,7 @@ The deployed service takes an HTTP POST request submitting data in JSON format, 
                 "Temp3pm": float,
                 "RainToday": boolean}] 
 
-Where every key corresponds to a column in the underlying dataset. 
+where every key corresponds to a column in the underlying dataset. 
 The response will either be "true" or "false", where "true" means, it will rain tomorrow in Australia. 
 
 ![image](https://user-images.githubusercontent.com/61315167/118365759-8245ba00-b59e-11eb-94cc-c85857ccf842.png)
