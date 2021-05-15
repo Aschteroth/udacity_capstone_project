@@ -60,13 +60,14 @@ A "StackEnsemble", "Stacked Generalization" or "Stacking", is
 *Fig. 4: The best model, a StackEnsemble*
 
 
-The score of 0.88999 is already pretty good, but there are some options to improve that score: 
+The score of 0.88999 is already pretty good, but there are some options to improve that score. 
+
+I could tune the experiments parameters and apply data cleaning and data munging techniques. For example
 - Giving the model more time to run by increasing the timeout duration. The experiment could run more models, but this will incur higher cost. 
 - Choosing another primary metric than AUC weighted
 - Collecting more data for the dataset. Since the last entry is from 2017, we could get a little bit more than 3 years worth of additional data. 
 - Try different startegies to handle missing data like imputation, dropping them altogether or using random values in the range of data for each column
 - One-hot encoding categorical data
-
 
 ## Hyperparameter Tuning
 
@@ -110,9 +111,28 @@ There are some options one could explore to improve the results from the HyperDr
 [Further reading](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-tune-hyperparameters)
 
 ## Model Deployment
-*TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
-The model takes a dictionary with following keys as input: 
+I deployed the best performing model of the AutoML experiment as a web service. To deploy the model in Azure, I had to follow 3 steps: 
+
+1) Register the model in my workspace. The screenshot below shows the code for the registration process. 
+
+![image](https://user-images.githubusercontent.com/61315167/118364599-5b38b980-b599-11eb-8ae0-c03100774dbe.png)
+*Fig. 9: Registering a model*
+
+2) Register an image including the model, its scoring script and environment file in a docker container.
+The scoring script is generated when a model is created. It provides the code to run for the image, while the environment file contains all the dependencies we need to run the script.
+
+See [Microsoft docs](https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.model.inferenceconfig?view=azure-ml-py) for more details.
+
+![image](https://user-images.githubusercontent.com/61315167/118364677-c4203180-b599-11eb-9a8f-5496ba64c7aa.png)
+*Fig. 10: Downloading the necessary files and configuring the Webservice*
+
+3) Deploy the created image as a web service
+
+![image](https://user-images.githubusercontent.com/61315167/118365053-64c32100-b59b-11eb-82a6-d7f3020b45dd.png)
+*Fig. 11: Deployment*
+
+The deployed service takes an HTTP POST request submitting data in JSON format, similar to a python dictionary with following keys as input: 
 {"data": [{"Date": str,
                 "Location": str,
                 "MinTemp": float,
@@ -134,7 +154,10 @@ The model takes a dictionary with following keys as input:
                 "Cloud3pm": float,
                 "Temp9am": float,
                 "Temp3pm": float,
-                "RainToday": boolean}]
+                "RainToday": boolean}] 
+
+Where every key corresponds to a column in the underlying dataset. 
+The response will either be "true" or "false", where "true" means, it will rain tomorrow in Australia. 
 
 ## Screen Recording
-You can take a look at my project [here](https://www.youtube.com/watch?v=34cjqPEEy1M)
+You can take a look at my project on youtube [here](https://www.youtube.com/watch?v=34cjqPEEy1M)
