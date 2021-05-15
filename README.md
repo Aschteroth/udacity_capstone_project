@@ -132,6 +132,11 @@ See [Microsoft docs](https://docs.microsoft.com/en-us/python/api/azureml-core/az
 ![image](https://user-images.githubusercontent.com/61315167/118365053-64c32100-b59b-11eb-82a6-d7f3020b45dd.png)
 *Fig. 11: Deployment*
 
+![image](https://user-images.githubusercontent.com/61315167/118365714-49a5e080-b59e-11eb-90a0-c1c24786bd1e.png)
+*Fig. 12: The deployed web service, showing "healthy" status*
+
+## Querying the service
+
 The deployed service takes an HTTP POST request submitting data in JSON format, similar to a python dictionary with following keys as input: 
 {"data": [{"Date": str,
                 "Location": str,
@@ -158,6 +163,14 @@ The deployed service takes an HTTP POST request submitting data in JSON format, 
 
 Where every key corresponds to a column in the underlying dataset. 
 The response will either be "true" or "false", where "true" means, it will rain tomorrow in Australia. 
+
+![image](https://user-images.githubusercontent.com/61315167/118365759-8245ba00-b59e-11eb-94cc-c85857ccf842.png)
+
+*Fig. 13: Sampling test data from our dataset*
+
+![image](https://user-images.githubusercontent.com/61315167/118365850-a6090000-b59e-11eb-8fdd-c86e6dfbf47a.png)
+
+*Fig. 14: Sending the request*
 
 ## Screen Recording
 You can take a look at my project on youtube [here](https://www.youtube.com/watch?v=34cjqPEEy1M)
