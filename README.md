@@ -102,5 +102,29 @@ There are many different options to improve the hyperdrive results:
 ## Model Deployment
 *TODO*: Give an overview of the deployed model and instructions on how to query the endpoint with a sample input.
 
+The model takes a dictionary with following keys: 
+{"data": [{"Date": str,
+                "Location": str,
+                "MinTemp": float,
+                "MaxTemp": float,
+                "Rainfall": float,
+                "Evaporation": str,
+                "Sunshine": str,
+                "WindGustDir": str,
+                "WindGustSpeed": float,
+                "WindDir9am": str,
+                "WindDir3pm": str,
+                "WindSpeed9am": float,
+                "WindSpeed3pm": float,
+                "Humidity9am": float,
+                "Humidity3pm": float,
+                "Pressure9am": float,
+                "Pressure3pm": float,
+                "Cloud9am": float,
+                "Cloud3pm": float,
+                "Temp9am": float,
+                "Temp3pm": float,
+                "RainToday": boolean}]
+
 ## Screen Recording
 You can take a look at my project [here](https://www.youtube.com/watch?v=34cjqPEEy1M)
