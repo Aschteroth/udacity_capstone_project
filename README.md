@@ -130,10 +130,12 @@ See [Microsoft docs](https://docs.microsoft.com/en-us/python/api/azureml-core/az
 3) Deploy the created image as a web service
 
 ![image](https://user-images.githubusercontent.com/61315167/118365053-64c32100-b59b-11eb-82a6-d7f3020b45dd.png)
+
 *Fig. 11: Deployment*
 
 ![image](https://user-images.githubusercontent.com/61315167/118365714-49a5e080-b59e-11eb-90a0-c1c24786bd1e.png)
-/n *Fig. 12: The deployed web service, showing "healthy" status*
+
+*Fig. 12: The deployed web service, showing "healthy" status*
 
 ## Querying the service
 
